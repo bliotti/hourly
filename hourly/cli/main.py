@@ -120,7 +120,7 @@ def flatten_dict(d, sep = '.'):
     returns [{k.sub_key:v},...]
     '''
     
-    return pd.io.json.json_normalize(d, sep=sep).to_dict(orient='records')[0]
+    return pd.json_normalize(d, sep=sep).to_dict(orient='records')[0]
 
 
 def config_override(cfg):
